@@ -14,7 +14,7 @@ end
 s = m:section(TypedSection, "chinadns", translate("General Setting"))
 s.anonymous   = true
 
-o = s:option(Flag, "enable", translate("Enable"), translate("The subnet address of interface WAN will be used as edns-client-subnet."))
+o = s:option(Flag, "enable", translate("Enable"))
 o.rmempty     = false
 
 o = s:option(Value, "port", translate("Local Port"))
@@ -29,11 +29,20 @@ o.default     = "/etc/chinadns_chnroute.txt"
 o.datatype    = "file"
 o.rmempty     = false
 
+o = s:option(Value, "foreign-subnet",
+	translate("Foreign Subnet"),
+	translate("Just foreign subnet. The subnet of interface WAN will be used as local subnet."))
+o.placeholder = "45.76.96.0"
+o.default     = "45.76.96.0"
+o.datatype    = "ipaddr"
+o.rmempty     = false
+
 o = s:option(Value, "server",
 	translate("Upstream Server"),
 	translate("A DNS server with edns-client-subnet support required."))
 o.placeholder = "8.8.8.8"
 o.default     = "8.8.8.8"
+o.datatype    = "ipaddr"
 o.rmempty     = false
 
 return m

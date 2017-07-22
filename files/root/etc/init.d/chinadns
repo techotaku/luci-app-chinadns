@@ -38,13 +38,15 @@ append_parm() {
 
 start_chinadns() {
 	local enable
-	local subnetwork=$(echo `ifstatus wan | grep \"address\" | grep -oE '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.'`0)
+	local local_subnet=$(echo `ifstatus wan | grep \"address\" | grep -oE '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.'`0)
+	local foreign_subnet
 	config_get_bool enable $1 enable
 	[ "$enable" = 1 ] || return 0
+	config_get foreign_subnet $1 foreign-subnet
 	append_parm $1 port "-p"
 	append_parm $1 server "-s"
 	append_parm $1 chnroute "-c"
-	xappend "-e $subnetwork"
+	xappend "-e $local_subnet,$foreign_subnet"
 	service_start /usr/bin/chinadns \
 		$parms
 	return $?
