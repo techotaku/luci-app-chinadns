@@ -29,7 +29,7 @@ o.default     = "/etc/chinadns_chnroute.txt"
 o.datatype    = "file"
 o.rmempty     = false
 
-o = s:option(Value, "foreign-subnet",
+o = s:option(Value, "foreign_subnet",
 	translate("Foreign Subnet"),
 	translate("Just foreign subnet. The subnet of interface WAN will be used as local subnet."))
 o.placeholder = "45.76.96.0"

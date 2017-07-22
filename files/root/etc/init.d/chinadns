@@ -42,7 +42,7 @@ start_chinadns() {
 	local foreign_subnet
 	config_get_bool enable $1 enable
 	[ "$enable" = 1 ] || return 0
-	config_get foreign_subnet $1 foreign-subnet
+	config_get foreign_subnet $1 foreign_subnet
 	append_parm $1 port "-p"
 	append_parm $1 server "-s"
 	append_parm $1 chnroute "-c"

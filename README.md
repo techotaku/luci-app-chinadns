@@ -1,4 +1,4 @@
-OpenWrt LuCI for ChinaDNS
+OpenWrt/LEDE LuCI for ChinaDNS 2
 ===
 
 [![Latest release][release_badge]][release_url]

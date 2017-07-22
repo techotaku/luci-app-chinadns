@@ -3,3 +3,4 @@ config chinadns
 	option enable '0'
 	option port '5300'
 	option server '8.8.8.8'
+	option foreign_subnet '45.76.96.0'
