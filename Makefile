@@ -71,7 +71,7 @@ define Package/luci-app-chinadns/install
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/controller
 	$(INSTALL_DATA) ./files/luci/controller/chinadns.lua $(1)/usr/lib/lua/luci/controller/chinadns.lua
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/model/cbi/chinadns
-	$(INSTALL_DATA) ./files/luci/model/cbi/chinadns/*.lua $(1)/usr/lib/lua/luci/model/cbi/chinadns/
+	$(INSTALL_DATA) ./files/luci/model/cbi/*.lua $(1)/usr/lib/lua/luci/model/cbi/chinadns/
 	$(INSTALL_DIR) $(1)/etc/config
 	$(INSTALL_DATA) ./files/root/etc/config/chinadns $(1)/etc/config/chinadns
 	$(INSTALL_DIR) $(1)/etc/init.d
