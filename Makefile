@@ -19,11 +19,11 @@ PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/luci-app-chinadns/Default
+define Package/luci-app-chinadns
 	SECTION:=luci
 	CATEGORY:=LuCI
 	SUBMENU:=3. Applications
-	TITLE:=LuCI support for ChinaDNS
+	TITLE:=LuCI Support for ChinaDNS
 	PKGARCH:=all
 	DEPENDS:=+ChinaDNS
 endef
