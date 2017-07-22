@@ -10,6 +10,9 @@ msgstr "国内路由表"
 msgid "Enable"
 msgstr "启用"
 
+msgid "The subnet address of interface WAN will be used as edns-client-subnet."
+msgstr "接口WAN的子网地址将被用作edns-client-subnet。"
+
 msgid "General Setting"
 msgstr "基本设置"
 
@@ -22,8 +25,8 @@ msgstr "未运行"
 msgid "RUNNING"
 msgstr "运行中"
 
-msgid "Upstream Servers"
+msgid "Upstream Server"
 msgstr "上游服务器"
 
-msgid "Use commas to separate multiple ip address"
-msgstr "多个IP地址使用逗号隔开"
+msgid "A DNS server with edns-client-subnet support required."
+msgstr "需要具有edns-client-subnet支持的DNS服务器。"

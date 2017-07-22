@@ -14,7 +14,7 @@ end
 s = m:section(TypedSection, "chinadns", translate("General Setting"))
 s.anonymous   = true
 
-o = s:option(Flag, "enable", translate("Enable"))
+o = s:option(Flag, "enable", translate("Enable"), translate("The subnet address of interface WAN will be used as edns-client-subnet."))
 o.rmempty     = false
 
 o = s:option(Value, "port", translate("Local Port"))
@@ -30,8 +30,8 @@ o.datatype    = "file"
 o.rmempty     = false
 
 o = s:option(Value, "server",
-	translate("Upstream Servers"),
-	translate("Use commas to separate multiple ip address"))
+	translate("Upstream Server"),
+	translate("A DNS server with edns-client-subnet support required."))
 o.placeholder = "8.8.8.8"
 o.default     = "8.8.8.8"
 o.rmempty     = false
